@@ -10,14 +10,32 @@
   <body>
     <header>
       <!-- Navbar -->
-      <nav>
-        <div id="title-box"></div>
-        <div class="nav-item">
-          <a href="#service">Our Services</a>
-          <a href="#why_us">Why us</a>
-          <a href="#">Testimonial</a>
-          <a href="#">FAQ</a>
-          <button type="button" class="btn btn-success fw-semibold">Register</button>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container py-3">
+          <a class="navbar-brand" href="#" id="title-box">Binar</a>
+          <div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="#offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas -->
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BCR</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="navbar-nav nav-item">
+                  <a class="nav-link" href="#service">Our Services</a>
+                  <a class="nav-link" href="#why_us">Why us</a>
+                  <a class="nav-link" href="#">Testimonial</a>
+                  <a class="nav-link" href="#">FAQ</a>
+                  <button type="button" class="btn btn-success fw-semibold">Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </nav>
       <!-- End Navbar -->
@@ -29,14 +47,14 @@
           <p>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
           <button type="button" class="btn btn-success">Mulai Sewa Mobil</button>
         </div>
-        <img src="assets/img/img_car.png" alt="image_car" width="650px" />
+        <img src="assets/img/img_car.png" alt="image_car" />
       </section>
       <!-- End Hero -->
     </header>
     <main>
       <!-- Service Section -->
       <section id="service">
-        <img src="assets/img/img_service.png" alt="img_service" width="450px" />
+        <img src="assets/img/img_service.png" alt="img_service" />
         <article class="service_text">
           <h2>Best Car Rental for any kind of trip in (Lokasimu)!</h2>
           <p>Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.</p>
@@ -57,29 +75,29 @@
           <h2>Why Us?</h2>
           <p>Mengapa harus pilih Binar Car rental?</p>
         </article>
-        <article class="why_item row gap-4">
-          <div class="col card">
+        <article class="why_item">
+          <div class="card">
             <div class="card-body">
               <img src="assets/img/icon_complete.png" />
               <h5 class="card-title">Mobil Lengkap</h5>
               <p class="card-text">Tersedia banyak pilihan mobil, kondisi masih baru, bersih dan terawat</p>
             </div>
           </div>
-          <div class="col card">
+          <div class="card">
             <div class="card-body">
               <img src="assets/img/icon_price.png" />
               <h5 class="card-title">Harga Murah</h5>
               <p class="card-text">Harga murah dan bersaing, bisa bandingkan harga kami dengan rental mobil lain</p>
             </div>
           </div>
-          <div class="col card">
+          <div class="card">
             <div class="card-body">
               <img src="assets/img/icon_24hrs.png" />
               <h5 class="card-title">Layanan 24 Jam</h5>
               <p class="card-text">Siap melayani kebutuhan Anda selama 24 jam nonstop. Kami juga tersedia di akhir minggu</p>
             </div>
           </div>
-          <div class="col card">
+          <div class="card">
             <div class="card-body">
               <img src="assets/img/icon_professional.png" />
               <h5 class="card-title">Sopir Profesional</h5>
@@ -89,6 +107,52 @@
         </article>
       </section>
       <!-- End Why us -->
+
+      <!-- Testimonial -->
+      <section id="testimonial">
+        <article class="testi_title">
+          <h2>Testimonial</h2>
+          <p>Berbagai review positif dari para pelanggan kami</p>
+        </article>
+
+        <!-- Carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div style="background-color: black" class="carousel-item active">
+              <div class="carousel-caption d-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div style="background-color: black" class="carousel-item">
+              <div class="carousel-caption d-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div style="background-color: black" class="carousel-item">
+              <div class="carousel-caption d-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!-- End Testimonial -->
     </main>
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
