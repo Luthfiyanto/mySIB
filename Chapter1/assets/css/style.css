@@ -132,6 +132,48 @@ li {
   margin-top: 20px;
 }
 
+#testimonial {
+  text-align: center;
+}
+
+.carousel-item {
+  height: 450px;
+}
+
+.carousel-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profil_pict {
+  width: 100px;
+  background-size: cover;
+  clip-path: ellipse(40% 40% at 50% 50%);
+}
+
+.review_item {
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.review_item > h5 {
+  font-weight: 700;
+}
+
+.rate > img {
+  width: 25px;
+}
+
 @media (min-width: 992px) {
   nav {
     margin-left: 130px;
@@ -155,12 +197,17 @@ li {
   .why_item {
     flex-direction: row;
   }
-}
 
-#testimonial {
-  text-align: center;
-}
+  .carousel-item {
+    height: 250px;
+  }
 
-.carousel-item {
-  height: 500px;
+  .carousel-caption {
+    flex-direction: row;
+  }
+
+  .review_item {
+    align-items: start;
+    text-align: left;
+  }
 }
