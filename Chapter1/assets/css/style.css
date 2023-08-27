@@ -120,8 +120,8 @@ li {
 }
 
 .why_item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
   gap: 1rem;
 }
 
@@ -258,8 +258,11 @@ footer > div > p > a {
     height: 250px;
   }
 
+  .why_item {
+    grid-template-columns: auto auto auto auto;
+  }
+
   #service,
-  .why_item,
   .carousel-caption,
   #FAQ,
   footer {
