@@ -7,14 +7,20 @@ function sortCarByYearAscendingly(cars) {
   let result = cars;
   // Tulis code-mu disini
   let len = cars.length;
+  let isSwapped = false;
   for (let i = len - 1; i >= 0; i--) {
+    isSwapped = false;
     for (let j = 1; j <= i; j++) {
       // Corrected inner loop condition
       if (cars[j - 1].year > cars[j].year) {
         let temp = cars[j - 1];
         cars[j - 1] = cars[j];
         cars[j] = temp;
+        isSwapped = true;
       }
+    }
+    if (!isSwapped) {
+      break;
     }
   }
 
