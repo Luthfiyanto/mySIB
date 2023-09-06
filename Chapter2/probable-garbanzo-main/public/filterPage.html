@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cari Mobil</title>
+    <link rel="stylesheet" href="css/filterpage.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container py-3">
+          <a class="navbar-brand" href="#" id="title-box">Binar</a>
+          <div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="#offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas -->
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BCR</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="navbar-nav nav-item">
+                  <a class="nav-link" href="index.html#service">Our Services</a>
+                  <a class="nav-link" href="index.html#why_us">Why us</a>
+                  <a class="nav-link" href="index.html#testimonial">Testimonial</a>
+                  <a class="nav-link" href="index.html#FAQ">FAQ</a>
+                  <button type="button" class="btn btn-success fw-semibold">Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Hero Section -->
+      <section id="hero">
+        <div>
+          <h2>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h2>
+          <p>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+        </div>
+        <img src="assets/img/img_car.svg" alt="image_car" />
+      </section>
+      <!-- End Hero -->
+    </header>
+
+    <main>
+      <!-- Filter Section -->
+      <section id="filter_section">
+        <article class="card shadow">
+          <div class="card-body container filter_card">
+            <div class="container filter">
+              <label for="driver_type">Tipe Driver</label>
+              <select name="driver_type" id="driver_type" class="form-select" aria-placeholder="Pilih Tipe Driver">
+                <option value="">Pilih Tipe Driver</option>
+                <option value="">Dengan Sopir</option>
+                <option value="">Tanpa Sopir (Lepas Kunci)</option>
+              </select>
+            </div>
+            <div class="container filter">
+              <label for="tanggal">Tanggal</label>
+              <input type="date" id="tanggal" class="form-control" placeholder="Pilih Tanggal" />
+            </div>
+            <div class="container filter">
+              <label for="waktu_ambil">Waktu Jemput / Ambil</label>
+              <input type="time" name="waktu_ambil" class="form-control" id="waktu_ambil" placeholder="Pilih Waktu" />
+            </div>
+            <div class="container filter">
+              <label for="jumlah_penumpang">Jumlah Penumpang</label>
+              <input type="number" id="jumlah_penumpang" class="form-control" placeholder="Jumlah Penumpang" />
+            </div>
+            <div class="filter_button">
+              <button type="submit" id="search-btn" class="btn btn-success">Cari Mobil</button>
+            </div>
+          </div>
+        </article>
+
+        <article id="result_data">
+          <!-- Card Result -->
+          <div class="card shadow-sm border-0">
+            <div class="card-body card_car">
+              <img src="images/car01.min.jpg" alt="car01" />
+              <p>Nama / Tipe Mobil</p>
+              <h5>Rp 430.000,00</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolores ullam assumenda nihil, provident nulla? Quam ullam maxime optio. Nobis?</p>
+              <div class="desc_car">
+                <img src="assets/img/fi_users.svg" alt="kapasitas" />
+                <p>4 orang</p>
+              </div>
+              <div class="desc_car">
+                <img src="assets/img/fi_settings.svg" alt="mekanik" />
+                <p>Manual</p>
+              </div>
+              <div class="desc_car">
+                <img src="assets/img/fi_calendar.svg" alt="tanggal" />
+                <p>Tahun 2020</p>
+              </div>
+              <button type="button" class="btn btn-success w-100">Pilih Mobil</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+        <p>binarcarrental@gmail.com</p>
+        <p>081-233-334-808</p>
+      </div>
+      <div>
+        <p><a href="#service">Our Service</a></p>
+        <p><a href="#why_us">Why Us</a></p>
+        <p><a href="#testimonial">Testimonial</a></p>
+        <p><a href="#FAQ">FAQ</a></p>
+      </div>
+      <div>
+        <p>Connect with us</p>
+        <div>
+          <img src="assets/img/icon_facebook.svg" alt="facebook" />
+          <img src="assets/img/icon_instagram.svg" alt="instagram" />
+          <img src="assets/img/icon_twitter.svg" alt="twitter" />
+          <img src="assets/img/icon_mail.svg" alt="mail" />
+          <img src="assets/img/icon_twitch.svg" alt="twitch" />
+        </div>
+      </div>
+      <div>
+        <p>Copyright Binar 2022</p>
+        <div style="width: 100px; height: 34px; background-color: rgba(13, 40, 166, 1)"></div>
+      </div>
+    </footer>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
