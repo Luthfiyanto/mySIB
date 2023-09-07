@@ -16,13 +16,14 @@ class App {
   run = () => {
     Car.list.forEach((car) => {
       const node = document.createElement("div");
+      // const node = document.getElementById("result_data");
       node.innerHTML = car.render();
-      this.carContainerElement.appendChild(node);
+      this.resultData.appendChild(node);
     });
   };
 
   async load() {
-    const cars = await BigInt64Array.listCars();
+    const cars = await Binar.listCars();
     Car.init(cars);
   }
 }

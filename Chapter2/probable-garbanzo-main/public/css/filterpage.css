@@ -48,10 +48,16 @@
 
 .card_car > img {
   width: 100%;
+  max-height: 180px;
+  object-fit: cover;
 }
 
 .card_car > p {
   margin: 0.5rem 0 !important;
+}
+
+.desc {
+  min-height: 50px;
 }
 
 .desc_car {

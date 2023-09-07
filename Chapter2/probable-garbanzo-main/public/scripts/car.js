@@ -28,12 +28,27 @@ class Car {
       
 
 
-      <p>id: <b>${this.id}</b></p>
-      <p>plate: <b>${this.plate}</b></p>
-      <p>manufacture: <b>${this.manufacture}</b></p>
-      <p>model: <b>${this.model}</b></p>
-      <p>available at: <b>${this.availableAt}</b></p>
-      <img src="${this.image}" alt="${this.manufacture}" width="64px">
+  <div class="card shadow-sm border-0">
+    <div class="card-body card_car">
+      <img src="${this.image}" alt="${this.manufacture}" />
+      <p>${this.manufacture}</p>
+      <h5>Rp ${this.rentPerDay},00</h5>
+      <p class="desc">${this.description}</p>
+      <div class="desc_car">
+        <img src="assets/img/fi_users.svg" alt="kapasitas" />
+        <p>${this.capacity} orang</p>
+      </div>
+      <div class="desc_car">
+        <img src="assets/img/fi_settings.svg" alt="mekanik" />
+        <p>${this.transmission}</p>
+      </div>
+      <div class="desc_car">
+        <img src="assets/img/fi_calendar.svg" alt="tanggal" />
+        <p>Tahun ${this.year}</p>
+      </div>
+      <button type="button" class="btn btn-success w-100">Pilih Mobil</button>
+    </div>
+  </div>
     `;
   }
 }
