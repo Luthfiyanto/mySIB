@@ -1,4 +1,10 @@
-class Car {
+class Component {
+  constructor() {}
+
+  render() {}
+}
+
+class Car extends Component {
   static list = [];
 
   static init(cars) {
@@ -6,6 +12,7 @@ class Car {
   }
 
   constructor({ id, plate, manufacture, model, image, rentPerDay, capacity, description, transmission, available, type, year, options, specs, availableAt }) {
+    super();
     this.id = id;
     this.plate = plate;
     this.manufacture = manufacture;
@@ -23,6 +30,13 @@ class Car {
     this.availableAt = availableAt;
   }
 
+  #formatCurrency(value) {
+    const reversedValue = String(value).split("").reverse().join("");
+    const groups = reversedValue.match(/.{1,3}/g);
+    const formattedValue = groups.join(".").split("").reverse().join("");
+
+    return formattedValue;
+  }
   render() {
     return `
       
@@ -32,17 +46,17 @@ class Car {
     <div class="card-body card_car">
       <img src="${this.image}" alt="${this.manufacture}" />
       <p>${this.manufacture}</p>
-      <h5>Rp ${this.rentPerDay},00</h5>
+      <h5>Rp ${this.#formatCurrency(this.rentPerDay)} / hari</h5>
       <p class="desc">${this.description}</p>
-      <div class="desc_car">
+      <div class="detail_car">
         <img src="assets/img/fi_users.svg" alt="kapasitas" />
         <p>${this.capacity} orang</p>
       </div>
-      <div class="desc_car">
+      <div class="detail_car">
         <img src="assets/img/fi_settings.svg" alt="mekanik" />
         <p>${this.transmission}</p>
       </div>
-      <div class="desc_car">
+      <div class="detail_car">
         <img src="assets/img/fi_calendar.svg" alt="tanggal" />
         <p>Tahun ${this.year}</p>
       </div>

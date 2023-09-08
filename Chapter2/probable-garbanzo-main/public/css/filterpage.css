@@ -60,14 +60,14 @@
   min-height: 50px;
 }
 
-.desc_car {
+.detail_car {
   margin: 1rem 0;
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-.desc_car > p {
+.detail_car > p {
   margin: 0 !important;
 }
 
