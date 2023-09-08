@@ -10,16 +10,18 @@ class App {
   async init() {
     await this.load();
 
-    this.searchButton.onclick = this.show;
+    this.searchButton.onclick = this.run;
   }
 
   // Fungsi filter
-  filterCars = () => {
-    const filteredCars = Car.list.filter((car) => {
-      return car.capacity >= parseInt(this.sumPassanger.value);
-    });
-    return filteredCars;
-  };
+  // filterCars = () => {
+  //   const filteredCars = Car.list.filter((car) => {
+  //     const carDate = car.convertAvailableDate(car.availableAt)[0];
+  //     const carTime = car.convertAvailableDate(car.availableAt)[1];
+  //     return car.capacity >= parseInt(this.sumPassanger.value || (carDate <= this.dateRent.value && carTime <= this.timeRent.value));
+  //   });
+  //   return filteredCars;
+  // };
 
   // Fungsi insert view
   displayCars = (car) => {
@@ -28,19 +30,43 @@ class App {
     this.resultData.appendChild(node);
   };
 
-  // Method untuk menampilkan mobil
-  run = () => {
-    this.clear();
-    const filteredCars = this.filterCars();
+  displayEmpty = () => {
+    const renderEmpty = `
+    <div class="empty">
+      <h5>OOOPPSS... No Car is Available</h5>
+      <p>Please comeback later or choose another one</p>
+    </div>
+    `;
 
-    if (!this.sumPassanger.value) {
+    const node = document.createElement("div");
+    node.innerHTML = renderEmpty;
+    this.resultData.appendChild(node);
+  };
+
+  // Method untuk menampilkan mobil
+  run = async () => {
+    this.clear();
+    // const filteredCars = this.filterCars();
+    const fullDateTime = new Date(`${this.dateRent.value} ${this.timeRent.value}`);
+
+    if (!this.sumPassanger.value && !this.dateRent.value && !this.timeRent.value) {
+      const condition = (i) => i.available === true;
+      const cars = await Binar.listCars(condition);
+      Car.init(cars);
       Car.list.forEach((car) => {
         this.displayCars(car);
       });
     } else {
-      filteredCars.forEach((car) => {
+      const condition = (i) => i.available && i.capacity >= parseInt(this.sumPassanger.value) && new Date(i.availableAt).getTime() >= fullDateTime;
+      const cars = await Binar.listCars(condition);
+      Car.init(cars);
+      Car.list.forEach((car) => {
         this.displayCars(car);
       });
+
+      if (cars.length === 0) {
+        this.displayEmpty();
+      }
     }
 
     console.log("Show the data successfully");
@@ -61,10 +87,5 @@ class App {
     }
 
     console.log("Cleared the view successfully");
-  };
-
-  show = () => {
-    this.clear();
-    this.run();
   };
 }

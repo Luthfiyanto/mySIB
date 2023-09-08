@@ -1,10 +1,4 @@
-class Component {
-  constructor() {}
-
-  render() {}
-}
-
-class Car extends Component {
+class Car {
   static list = [];
 
   static init(cars) {
@@ -12,7 +6,6 @@ class Car extends Component {
   }
 
   constructor({ id, plate, manufacture, model, image, rentPerDay, capacity, description, transmission, available, type, year, options, specs, availableAt }) {
-    super();
     this.id = id;
     this.plate = plate;
     this.manufacture = manufacture;
@@ -37,6 +30,7 @@ class Car extends Component {
 
     return formattedValue;
   }
+
   render() {
     return `
       
@@ -45,7 +39,7 @@ class Car extends Component {
   <div class="card shadow-sm border-0">
     <div class="card-body card_car">
       <img src="${this.image}" alt="${this.manufacture}" />
-      <p>${this.manufacture}</p>
+      <p class="car-title">${this.manufacture}</p>
       <h5>Rp ${this.#formatCurrency(this.rentPerDay)} / hari</h5>
       <p class="desc">${this.description}</p>
       <div class="detail_car">
