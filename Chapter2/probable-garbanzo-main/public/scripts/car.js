@@ -39,7 +39,7 @@ class Car {
   <div class="card shadow-sm border-0">
     <div class="card-body card_car">
       <img src="${this.image}" alt="${this.manufacture}" />
-      <p class="car-title">${this.manufacture}</p>
+      <p class="car-title">${this.manufacture} ${this.model}</p>
       <h5>Rp ${this.#formatCurrency(this.rentPerDay)} / hari</h5>
       <p class="desc">${this.description}</p>
       <div class="detail_car">
