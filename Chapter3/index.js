@@ -8,11 +8,11 @@ const PORT = 8000;
 app.use(express.json());
 
 app.get("/", handleHome);
-app.get("/cars", handleListCars);
-app.get("/cars/:id", handleGetCar);
+app.get("/cars", setCar, handleListCars);
+app.get("/cars/:id", setCar, handleGetCar);
 app.post("/cars", handleCreateCar);
-app.put("/cars/:id", handleUpdateCar);
-app.delete("/cars/:id", handleDeleteCar);
+app.put("/cars/:id", setCar, handleUpdateCar);
+app.delete("/cars/:id", setCar, handleDeleteCar);
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
