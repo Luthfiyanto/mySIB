@@ -18,3 +18,15 @@ Jalankan file index.js dengan command:
 npm run start
 atau
 node index.js
+
+# TESTING DENGAN POSTMAN
+
+Gunakan port 8000 untuk mengakses.
+Silahkan lakukan pengujian dengan mengirimkan request sesuai endpoint berikut:
+
+- GET/
+- GET/cars
+- GET/cars/:id
+- POST/cars
+- PUT/cars/:id
+- DELETE/cars/:id
