@@ -223,5 +223,41 @@
     "rentPerDay": 1000000,
     "description": " Electric speed-sensitive variable-assist pwr steering. Steel side-door impact beams. Dual bright exhaust tips.",
     "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "26",
+    "name": "Nissan Skylane",
+    "image": "./images/car26.min.jpg",
+    "capacity": 3,
+    "rentPerDay": 2500000,
+    "description": " Electric speed-sensitive variable-assist pwr steering. Steel side-door impact beams. Dual bright exhaust tips.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "27",
+    "name": "Honda Subaru",
+    "image": "./images/car27.min.jpg",
+    "capacity": 3,
+    "rentPerDay": 2000000,
+    "description": " Electric speed-sensitive variable-assist pwr steering. Steel side-door impact beams. Dual bright exhaust tips.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "27",
+    "name": "Hyndai Y10",
+    "image": "./images/car29.min.jpg",
+    "capacity": 4,
+    "rentPerDay": 2400000,
+    "description": " Electric speed-sensitive variable-assist pwr steering. Steel side-door impact beams. Dual bright exhaust tips.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "29",
+    "name": "Hyndai Y10",
+    "image": "./images/car29.min.jpg",
+    "capacity": 4,
+    "rentPerDay": 2400000,
+    "description": " Electric speed-sensitive variable-assist pwr steering. Steel side-door impact beams. Dual bright exhaust tips.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
   }
 ]

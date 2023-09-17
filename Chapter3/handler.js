@@ -1,4 +1,3 @@
-// import Car from "./car";
 const Car = require("./car");
 
 function handleHome(req, res) {
@@ -16,19 +15,20 @@ function handleListCars(req, res) {
 }
 
 function handleGetCar(req, res) {
-  const car = req.car;
+  // const car = req.car;
+  const car = Car.find(req.params.id);
   res.status(200).json(car);
 }
 
 function handleUpdateCar(req, res) {
-  const car = req.car;
-  car.update(req.body);
+  const car = Car.update(req.body);
+  // Car.update(car);
   res.status(200).json(car);
 }
 
 function handleDeleteCar(req, res) {
-  const car = req.car;
-  car.delete();
+  const carId = req.params.id;
+  Car.delete(carId);
   res.status(204).end();
 }
 

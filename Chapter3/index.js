@@ -9,10 +9,10 @@ app.use(express.json());
 
 app.get("/", handleHome);
 app.get("/cars", handleListCars);
-app.get("/cars/:id", setCar, handleGetCar);
-app.post("/cars", setCar, handleCreateCar);
-app.put("/cars/:id", setCar, handleUpdateCar);
-app.delete("/cars/:is", setCar, handleDeleteCar);
+app.get("/cars/:id", handleGetCar);
+app.post("/cars", handleCreateCar);
+app.put("/cars/:id", handleUpdateCar);
+app.delete("/cars/:id", handleDeleteCar);
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);

@@ -1,4 +1,5 @@
 const cars = require("./data/carsData.json");
+const fs = require("fs");
 
 class Car {
   static records = cars;
@@ -14,32 +15,39 @@ class Car {
   }
 
   _generateId() {
-    const lastRecordId = this.constructor.records[this.constructor.records - 1]?.id || "0";
-    return Number(lastRecordId + 1).toString();
+    const data = this.constructor.records;
+    const lastRecordId = data[data.length - 1].id === data.length ? data.length + 2 : data.length + 1;
+
+    return lastRecordId.toString();
   }
 
-  update(params) {
-    const idx = this.constructor.records.findIndex((i) => i.id === this.id);
+  static update(params) {
+    const idx = this.records.findIndex((i) => i.id === params.id);
 
-    params.name && (this.name = params.name);
-    params.image && (this.image = params.image);
-    params.capacity && (this.capacity = params.capacity);
-    params.rentPerDay && (this.rentPerDay = params.rentPerDay);
-    params.description && (this.description = params.description);
-    params.availableAt && (this.availableAt = params.availableAt);
+    if (idx === -1) {
+      throw new Error("Car not found");
+    }
+    const car = this.records[idx];
 
-    this.constructor.records[idx] = this;
+    if (params.name !== undefined) car.name = params.name;
+    if (params.image !== undefined) car.image = params.image;
+    if (params.capacity !== undefined) car.capacity = params.capacity;
+    if (params.rentPerDay !== undefined) car.rentPerDay = params.rentPerDay;
+    if (params.description !== undefined) car.description = params.description;
+    if (params.availableAt !== undefined) car.availableAt = params.availableAt;
 
-    return this;
+    return car;
   }
 
-  delete() {
-    this.constructor.records = this.constructor.records.filter((i) => i.id !== this.id);
+  static delete(id) {
+    this.records = this.records.filter((i) => i.id !== id);
+    fs.writeFileSync("./data/carsData.json", JSON.stringify(this.records, null, 2));
   }
 
   static create(params) {
     const car = new this(params);
     this.records.push(car);
+    fs.writeFileSync("./data/carsData.json", JSON.stringify(cars, null, 2));
     return car;
   }
 
