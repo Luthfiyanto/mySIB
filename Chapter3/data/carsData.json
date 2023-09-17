@@ -1,0 +1,227 @@
+[
+  {
+    "id": "1",
+    "name": "Ford F150",
+    "image": "./images/car01.min.jpg",
+    "capacity": 2,
+    "rentPerDay": 200000,
+    "description": " Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "2",
+    "name": "BMW X5",
+    "image": "./images/car02.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 800000,
+    "description": " Rear passenger map pockets. Electrochromic rearview mirror. Dual chrome exhaust tips. Locking glove box.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "3",
+    "name": "Lincoln MKZ",
+    "image": "./images/car03.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 900000,
+    "description": " Driver & front passenger map pockets. Direct-type tire pressure monitor system. Cargo area lamp. Glove box lamp.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "4",
+    "name": "BMW M5",
+    "image": "./images/car04.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 900000,
+    "description": " 6.1L SRT V8 \"Hemi\" engine.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "5",
+    "name": "Lincoln Navigator",
+    "image": "./images/car05.min.jpg",
+    "capacity": 2,
+    "rentPerDay": 200000,
+    "description": " Body color sill extension. Torsion beam rear suspension w/stabilizer bar. Front & rear passenger folding assist grips.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "6",
+    "name": "Ford Fiesta",
+    "image": "./images/car06.min.jpg",
+    "capacity": 4,
+    "rentPerDay": 900000,
+    "description": " Tilt steering column. Carpeted cargo area. Tip start system. Leather-wrapped shift knob.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "7",
+    "name": "Honda Accord",
+    "image": "./images/car07.min.jpg",
+    "capacity": 4,
+    "rentPerDay": 900000,
+    "description": " Silver finish interior door handles. 160-amp alternator. Tire pressure monitoring system (TPMS). Cloth covered headliner.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "8",
+    "name": "Lincoln Navigator",
+    "image": "./images/car08.min.jpg",
+    "capacity": 2,
+    "rentPerDay": 300000,
+    "description": " XM satellite radio receiver -inc: 90 day trial subscription. Dual front illuminated visor vanity mirrors.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "9",
+    "name": "Buick LaCrosse",
+    "image": "./images/car09.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 1000000,
+    "description": " Rear reading & courtesy lamps. Zone body construction -inc: front/rear crumple zones, hood deformation point.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "10",
+    "name": "BMW X5",
+    "image": "./images/car10.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 300000,
+    "description": " Cargo compartment lamp. Body color fascias w/bright insert. Front/rear stabilizer bars.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "11",
+    "name": "Chevy Malibu",
+    "image": "./images/car11.min.jpg",
+    "capacity": 2,
+    "rentPerDay": 700000,
+    "description": " Cloth covered headliner. Sentry Key theft deterrent system. Air conditioning w/in-cabin microfilter.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "12",
+    "name": "BMW X3",
+    "image": "./images/car12.min.jpg",
+    "capacity": 4,
+    "rentPerDay": 800000,
+    "description": " Multi-reflector halogen headlamps. Speed control.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "13",
+    "name": "Chevy Malibu",
+    "image": "./images/car13.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 900000,
+    "description": " Leather-wrapped shift knob. Dual front illuminated visor vanity mirrors. Battery saver. Driver & front passenger map pockets.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "14",
+    "name": "Chevy Malibu",
+    "image": "./images/car14.min.jpg",
+    "capacity": 2,
+    "rentPerDay": 700000,
+    "description": " Front/rear side curtain airbags. Front & rear side curtain airbags. Body color front license plate brow. Rear body-color spoiler.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "15",
+    "name": "Lincoln MKS",
+    "image": "./images/car15.min.jpg",
+    "capacity": 4,
+    "rentPerDay": 900000,
+    "description": " Remote fuel lid release. Electronic parking brake. Daytime running lights (DRL). Silver finish interior door handles. Back-up camera.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "16",
+    "name": "Chevy Silverado",
+    "image": "./images/car16.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 200000,
+    "description": " Rear window defroster. High performance suspension. 1.8L DOHC 16-valve I4 engine -inc: engine cover.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "17",
+    "name": "Lincoln MKS",
+    "image": "./images/car17.min.jpg",
+    "capacity": 2,
+    "rentPerDay": 1000000,
+    "description": " Energy absorbing steering column. 3-point ELR/ALR front passenger seat belt w/pretensioner & load limiter.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "18",
+    "name": "Dodge Ram",
+    "image": "./images/car18.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 700000,
+    "description": " 3-point ELR/ALR front passenger seat belt w/pretensioner & load limiter. Rear passenger map pockets. Black roof molding.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "19",
+    "name": "Ford F150",
+    "image": "./images/car19.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 600000,
+    "description": "",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "20",
+    "name": "Audi A4",
+    "image": "./images/car20.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 700000,
+    "description": " Pwr accessory delay. Tire pressure monitoring system (TPMS). Tilt/telescoping steering column.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "21",
+    "name": "Dodge Durango",
+    "image": "./images/car21.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 400000,
+    "description": " Floor carpeting. Electric speed-sensitive variable-assist pwr steering. Dana 44/226mm rear axle. Roof mounted antenna.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "22",
+    "name": "Audi S5",
+    "image": "./images/car22.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 300000,
+    "description": " Pwr front vented disc/rear drum brakes. Pwr windows -inc: 1-touch open/close. Cloth covered headliner.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "23",
+    "name": "Toyota Camry",
+    "image": "./images/car23.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 200000,
+    "description": " Intermittent rear wiper w/washer. Energy absorbing front/rear bumpers. Engine mounts -inc: (2) solid, (1) liquid-filled.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "24",
+    "name": "Nissan Pathfiner",
+    "image": "./images/car24.min.jpg",
+    "capacity": 6,
+    "rentPerDay": 600000,
+    "description": " 200mm front axle. Roof mounted antenna. Cargo compartment cover. Rear bench seat -inc: (3) adjustable headrests.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  },
+  {
+    "id": "25",
+    "name": "Honda Civic",
+    "image": "./images/car25.min.jpg",
+    "capacity": 2,
+    "rentPerDay": 1000000,
+    "description": " Electric speed-sensitive variable-assist pwr steering. Steel side-door impact beams. Dual bright exhaust tips.",
+    "availableAt": "2023-03-23T15:49:05.563Z"
+  }
+]
