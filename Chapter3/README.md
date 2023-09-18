@@ -12,6 +12,11 @@ Dalam repo ini terdiri dari 5 file utama:
 - car.js : berfungsi untuk menghimpun data dari json menjadi collection data untuk kemudian dapat dimanipulasi
 - data/carsData.json : berisi data mobil dengan properti yang telah disederhanakan daripada sebelumnya yang ada pada file cars.json (data untuk tugas challenge sebelumnya)
 
+# INSTALL DEPENDENCIES
+
+Jalankan perintah:
+npm install
+
 # JALANKAN SERVER
 
 Jalankan file index.js dengan command:
