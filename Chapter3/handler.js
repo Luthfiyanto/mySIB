@@ -11,18 +11,41 @@ function handleCreateCar(req, res) {
 
 function handleListCars(req, res) {
   const cars = Car.list();
+
+  const { name } = req.query;
+  const { capacity } = req.query;
+  const { rentPerDay } = req.query;
+  const { availableAt } = req.query;
+
+  if (name) {
+    const car = cars.filter((i) => i.name == name);
+    res.status(200).json(car);
+  }
+
+  if (capacity) {
+    const car = cars.filter((i) => i.capacity == capacity);
+    res.status(200).json(car);
+  }
+
+  if (rentPerDay) {
+    const car = cars.filter((i) => i.rentPerDay == rentPerDay);
+    res.status(200).json(car);
+  }
+
+  if (availableAt) {
+    const car = cars.filter((i) => i.availableAt == availableAt);
+    res.status(200).json(car);
+  }
   res.status(200).json(cars);
 }
 
 function handleGetCar(req, res) {
-  // const car = req.car;
   const car = Car.find(req.params.id);
   res.status(200).json(car);
 }
 
 function handleUpdateCar(req, res) {
   const car = Car.update(req.body);
-  // Car.update(car);
   res.status(200).json(car);
 }
 
@@ -32,6 +55,10 @@ function handleDeleteCar(req, res) {
   res.status(204).end();
 }
 
+function handleErrorPage(req, res) {
+  res.status(404).send("404 Page Not Found");
+}
+
 module.exports = {
   handleHome,
   handleCreateCar,
@@ -39,4 +66,5 @@ module.exports = {
   handleGetCar,
   handleUpdateCar,
   handleDeleteCar,
+  handleErrorPage,
 };
