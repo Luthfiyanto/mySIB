@@ -20,7 +20,7 @@ fs.readFile(inputFilePath, (err, data) => {
 
   const filteredCarsData = carsData.map((car, index) => {
     return {
-      id: String(index + 1),
+      id: car.id,
       name: car.manufacture + " " + car.model,
       image: car.image,
       capacity: car.capacity,
