@@ -45,7 +45,9 @@ function handleGetCar(req, res) {
 }
 
 function handleUpdateCar(req, res) {
-  const car = Car.update(req.body);
+  const id = req.params.id;
+  const updatedData = req.body;
+  const car = Car.update({ id, ...updatedData });
   res.status(200).json(car);
 }
 
