@@ -1,11 +1,13 @@
 const cars = require("./data/carsData.json");
+const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
 
 class Car {
   static records = cars;
 
   constructor(params) {
-    this.id = this._generateId().toString();
+    // this.id = this._generateId().toString();
+    this.id = uuidv4();
     this.name = params.name;
     this.image = params.image;
     this.capacity = params.capacity;
@@ -14,12 +16,13 @@ class Car {
     this.availableAt = params.availableAt;
   }
 
-  _generateId() {
-    const data = this.constructor.records;
-    const lastRecordId = data[data.length - 1].id === data.length ? data.length + 2 : data.length + 1;
+  // Custom Id by increment (if needed)
+  // _generateId() {
+  //   const data = this.constructor.records;
+  //   const lastRecordId = data[data.length - 1].id === data.length ? data.length + 2 : data.length + 1;
 
-    return lastRecordId.toString();
-  }
+  //   return lastRecordId.toString();
+  // }
 
   static update(params) {
     const idx = this.records.findIndex((i) => i.id === params.id);
