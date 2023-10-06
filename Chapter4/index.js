@@ -1,7 +1,7 @@
 const express = require("express");
 const { handleHome, handleCreateCar, handleListCars, handleGetCar, handleUpdateCar, handleDeleteCar, handleErrorPage } = require("./handlers");
 
-const { checkDataById, validateCarData } = require("./middleware/checkingDataCar");
+const { checkDataById, validateCarData } = require("./middleware/validation");
 
 const app = express();
 const PORT = 8000;
