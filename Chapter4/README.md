@@ -45,7 +45,7 @@ Kemudian generate seeder bila memerlukan data dummy dengan command:
 npx sequelize db:seeder:all
 ```
 
-Sampai langkah ini, database seharusnya sudah terisi 4. Jalankan Server
+Sampai langkah ini, database seharusnya sudah terisi 5. Jalankan Server
 File index.js akan dijalankan dengan command berikut.
 
 ```bash
