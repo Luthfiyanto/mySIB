@@ -10,17 +10,17 @@ Pada tugas ini mengambil studi kasus rental mobil dengan desain tabel tunggal se
 
 ## HOW TO RUN PROJECT
 
-1. Download atau Clone repository
-2. Install Dependencies<br>
+1. **Download atau Clone repository**
+2. **Install Dependencies**<br>
    Jalankan perintah
    
    ```bash
    npm install
    ```
 
-3. Konfigurasi file<br>
+3. **Konfigurasi file**<br>
    Sesuaikan file config.json dengan database yang akan terhubung
-4. Siapkan database<br>
+4. **Siapkan database**<br>
    Jalankan perintah berikut untuk melakukan migrasi database:
 
    ```bash
@@ -46,7 +46,7 @@ Pada tugas ini mengambil studi kasus rental mobil dengan desain tabel tunggal se
    ```
    
    Sampai langkah ini, database seharusnya sudah terisi 
-5. Jalankan Server<br>
+5. **Jalankan Server**<br>
    File index.js akan dijalankan dengan command berikut.
    
    ```bash
