@@ -13,52 +13,53 @@ Disini link / gambar ERD
 1. Download atau Clone repository
 2. Install Dependencies
    Jalankan perintah
-
-```bash
-npm install
-```
+   
+   ```bash
+   npm install
+   ```
 
 3. Konfigurasi file
    Sesuaikan file config.json dengan database yang akan terhubung
 4. Siapkan database
    Jalankan perintah berikut untuk melakukan migrasi database:
 
-```bash
-npx sequelize db:migrate
-```
+   ```bash
+   npx sequelize db:migrate
+   ```
 
-Pastikan kolom-kolom berikut tersedia di database setelah melakukan migrasi.
-
-- Id
-- name
-- type
-- image
-- capacity
-- rentPerDay
-- availableAt
-- createAt
-- updateAt
-
-Kemudian generate seeder bila memerlukan data dummy dengan command:
-
-```bash
-npx sequelize db:seeder:all
-```
-
-Sampai langkah ini, database seharusnya sudah terisi 5. Jalankan Server
-File index.js akan dijalankan dengan command berikut.
-
-```bash
-npm run start
-```
-
-atau
-
-```bash
-node index.js
-```
-
-Server akan berjalan pada port 8000 dan bisa dicek dengan mengetik url 'localhost:8000'
+   Pastikan kolom-kolom berikut tersedia di database setelah melakukan migrasi.
+   
+   - Id
+   - name
+   - type
+   - image
+   - capacity
+   - rentPerDay
+   - availableAt
+   - createAt
+   - updateAt
+   
+   Kemudian generate seeder bila memerlukan data dummy dengan command:
+   
+   ```bash
+   npx sequelize db:seeder:all
+   ```
+   
+   Sampai langkah ini, database seharusnya sudah terisi 
+5. Jalankan Server
+   File index.js akan dijalankan dengan command berikut.
+   
+   ```bash
+   npm run start
+   ```
+   
+   atau
+   
+   ```bash
+   node index.js
+   ```
+   
+   Server akan berjalan pada port 8000 dan bisa dicek dengan mengetik url 'localhost:8000'
 
 ## TESTING WITH POSTMAN
 
