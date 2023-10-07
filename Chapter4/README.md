@@ -6,7 +6,7 @@ Tugas ini bertujuan untuk mengimplementasikan database menggunakan DBMS Postgre 
 
 Pada tugas ini mengambil studi kasus rental mobil dengan desain database tunggal sebagaimana diagram berikut ini
 
-![ERD](github.com/Luthfiyanto/mySIB/Chapter4/data/erd.png)
+![ERD](https://github.com/Luthfiyanto/mySIB/blob/main/Chapter4/data/erd.png)
 
 ## HOW TO RUN PROJECT
 
