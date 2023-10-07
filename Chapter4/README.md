@@ -18,9 +18,9 @@ Pada tugas ini mengambil studi kasus rental mobil dengan desain tabel tunggal se
    npm install
    ```
 
-3. Konfigurasi file
+4. Konfigurasi file
    Sesuaikan file config.json dengan database yang akan terhubung
-4. Siapkan database
+6. Siapkan database
    Jalankan perintah berikut untuk melakukan migrasi database:
 
    ```bash
@@ -46,7 +46,7 @@ Pada tugas ini mengambil studi kasus rental mobil dengan desain tabel tunggal se
    ```
    
    Sampai langkah ini, database seharusnya sudah terisi 
-5. Jalankan Server
+7. Jalankan Server
    File index.js akan dijalankan dengan command berikut.
    
    ```bash
