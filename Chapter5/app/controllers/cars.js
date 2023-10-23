@@ -108,15 +108,16 @@ const update = async (req, res) => {
 const destroy = async (req, res) => {
   try {
     const id = req.params.id;
-    await carServices.deleteCar(id);
-    return res.status(204).json({
+    const { id: userId } = req.user;
+    await carServices.deleteCar(id, userId);
+    return res.status(200).json({
       status: "OK",
       message: "Deleted Successful",
     });
   } catch (error) {
-    return res.status(error.statusCode).json({
+    return res.status(error.statusCode || 500).json({
       status: "Failed",
-      message: error.message,
+      message: `Failed to delete: ${error.message}`,
     });
   }
 };

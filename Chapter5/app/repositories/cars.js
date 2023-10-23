@@ -35,9 +35,9 @@ exports.findByPk = (id) => {
 };
 
 exports.update = (id, payload, userId) => {
-  return Car.update({ ...payload, updatedBy: userId }, { where: { id: id }, returning: true });
+  return Car.update({ ...payload, updatedBy: userId }, { where: { id: id }, returning: true, paranoid: false });
 };
 
-exports.delete = (id) => {
+exports.delete = (id, userId) => {
   return Car.destroy({ where: { id: id } });
 };
