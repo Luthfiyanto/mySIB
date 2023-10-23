@@ -28,9 +28,9 @@ exports.getList = async (params) => {
   }
 };
 
-exports.createCar = async (payload) => {
+exports.createCar = async (payload, userId) => {
   try {
-    const car = await carRepository.create(payload);
+    const car = await carRepository.create(payload, userId);
     return car;
   } catch (error) {
     throw new ApplicationError(`Failed to get list cars: ${error.message}`, error.statusCode);
@@ -49,9 +49,9 @@ exports.getCarById = async (id) => {
   }
 };
 
-exports.updateCar = async (id, payload) => {
+exports.updateCar = async (id, payload, userId) => {
   try {
-    const [_, data] = await carRepository.update(id, payload);
+    const [_, data] = await carRepository.update(id, payload, userId);
     return data;
   } catch (error) {
     throw new ApplicationError(`Failed to update car: ${error.message}`, 500);

@@ -13,3 +13,26 @@ exports.authorize = async (req, res, next) => {
     });
   }
 };
+
+exports.isSuperAdmin = (req, res, next) => {
+  const { role } = req.user;
+
+  if (role !== "SUPERADMIN") {
+    return res.status(403).json({
+      status: "Fail",
+      message: "FORBIDDEN",
+    });
+  }
+  next();
+};
+
+exports.isSuperOrAdmin = (req, res, next) => {
+  const { role } = req.user;
+  if (role !== "SUPERADMIN" && role !== "ADMIN") {
+    return res.status(403).json({
+      status: "Fail",
+      message: "FORBIDDEN",
+    });
+  }
+  next();
+};

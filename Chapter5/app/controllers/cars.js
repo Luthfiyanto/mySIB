@@ -66,14 +66,16 @@ const detail = (req, res) => {
 const create = async (req, res) => {
   try {
     const body = { id: uuidv4(), ...req.body, createAt: new Date(), updateAt: new Date() };
-    const data = await carServices.createCar(body);
+    const { id: user_id } = req.user;
+
+    const data = await carServices.createCar(body, user_id);
     return res.status(201).json({
       status: "OK",
       message: "Created Success",
       data,
     });
   } catch (error) {
-    return res.status(error.statusCode).json({
+    return res.status(error.statusCode || 500).json({
       status: "Failed",
       message: error.message,
     });
@@ -84,9 +86,10 @@ const create = async (req, res) => {
 const update = async (req, res) => {
   try {
     const id = req.params.id;
+    const { id: userId } = req.user;
     const body = { ...req.body, updateAt: new Date() };
 
-    const data = await carServices.updateCar(id, body);
+    const data = await carServices.updateCar(id, body, userId);
 
     return res.status(201).json({
       status: "OK",

@@ -10,7 +10,7 @@ const PORT = 8000;
 app.use(express.json());
 
 // User
-app.post("/admin/register", authMiddleware.authorize, userController.registerAdmin);
+app.post("/admin/register", authMiddleware.authorize, authMiddleware.isSuperAdmin, userController.registerAdmin);
 
 app.post("/register", userController.register);
 app.post("/login", userController.login);
@@ -18,9 +18,9 @@ app.post("/login", userController.login);
 app.get("/", generalController.home);
 app.get("/cars", authMiddleware.authorize, carController.list);
 app.get("/cars/:id", authMiddleware.authorize, carController.findAndSetById, carController.detail);
-app.post("/cars", authMiddleware.authorize, carController.validationInputCar, carController.create);
-app.put("/cars/:id", authMiddleware.authorize, carController.findAndSetById, carController.validationInputCar, carController.update);
-app.delete("/cars/:id", authMiddleware.authorize, carController.findAndSetById, carController.destroy);
+app.post("/cars", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, carController.validationInputCar, carController.create);
+app.put("/cars/:id", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, carController.findAndSetById, carController.validationInputCar, carController.update);
+app.delete("/cars/:id", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, carController.findAndSetById, carController.destroy);
 app.get("*", generalController.noPage);
 
 app.listen(PORT, () => {

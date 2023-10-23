@@ -1,23 +1,41 @@
-const { Car } = require("./../models");
+const { Car, User } = require("./../models");
 
 exports.getListCars = () => {
-  return Car.findAll();
+  return Car.findAll({
+    attributes: { exclude: ["createdBy", "updatedBy", "deletedBy"] },
+  });
 };
 
 exports.getFilteredListCars = (params) => {
-  return Car.findAll({ where: params, attributes: ["id", "name", "type", "image", "capacity", "rentPerDay", "description", "availableAt"] });
+  return Car.findAll({ where: params, attributes: { exclude: ["createdBy", "updatedBy", "deletedBy"] } });
 };
 
-exports.create = (body) => {
-  return Car.create(body);
+exports.create = (body, user_id) => {
+  return Car.create({ ...body, createdBy: user_id });
 };
 
 exports.findByPk = (id) => {
-  return Car.findByPk(id);
+  return Car.findByPk(id, {
+    include: [
+      {
+        model: User,
+        as: "created",
+      },
+      {
+        model: User,
+        as: "updated",
+      },
+      {
+        model: User,
+        as: "deleted",
+      },
+    ],
+    attributes: { exclude: ["createdBy", "updatedBy", "deletedBy"] },
+  });
 };
 
-exports.update = (id, payload) => {
-  return Car.update({ ...payload }, { where: { id: id }, returning: true });
+exports.update = (id, payload, userId) => {
+  return Car.update({ ...payload, updatedBy: userId }, { where: { id: id }, returning: true });
 };
 
 exports.delete = (id) => {

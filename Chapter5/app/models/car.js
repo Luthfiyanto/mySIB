@@ -9,6 +9,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsTo(models.User, {
+        foreignKey: "createdBy",
+        as: "created",
+      });
+      this.belongsTo(models.User, {
+        foreignKey: "updatedBy",
+        as: "updated",
+      });
+      this.belongsTo(models.User, {
+        foreignKey: "deletedBy",
+        as: "deleted",
+      });
     }
   }
   Car.init(

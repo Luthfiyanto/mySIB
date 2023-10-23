@@ -24,7 +24,7 @@ const checkPassword = async (password, hash) => {
 
 const JWT_SECRET_KEY = "FSW1";
 const createToken = (payload) => {
-  return jwt.sign(payload, JWT_SECRET_KEY, { expiresIn: 1000 });
+  return jwt.sign(payload, JWT_SECRET_KEY);
 };
 
 const verifyToken = (token) => {
