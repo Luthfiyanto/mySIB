@@ -1,12 +1,12 @@
-# Challenge 4 : Database & Async Function
+# Challenge 5 : Dokumentasi API
 
-Tugas ini bertujuan untuk mengimplementasikan database menggunakan DBMS Postgre yang diintegrasikan dengan Restful API melalui ORM Sequelize.
+Tugas ini bertujuan untuk mengimplementasikan design service repository pattern dengan menerapkan fitur authentication dan authorization serta association antara user dengan car. Kemudian hasil dari API yang dibuat didokumentasikan menggunakan Swagger yang bisa diakses melalui endpoint *( 127.0.0.1:8000/api-docs )* setelah menjalankan projek.
 
 ## Database dan Schema
 
 Pada tugas ini mengambil studi kasus rental mobil dengan desain tabel tunggal sebagaimana diagram berikut ini
 
-![ERD](https://github.com/Luthfiyanto/mySIB/blob/main/Chapter4/data/erd.png)
+![ERD](https://github.com/Luthfiyanto/mySIB/blob/main/Chapter5/data/schema.png)
 
 ## HOW TO RUN PROJECT
 
@@ -27,17 +27,7 @@ Pada tugas ini mengambil studi kasus rental mobil dengan desain tabel tunggal se
    npx sequelize db:migrate
    ```
 
-   Pastikan kolom-kolom berikut tersedia di database setelah melakukan migrasi.
-   
-   - Id
-   - name
-   - type
-   - image
-   - capacity
-   - rentPerDay
-   - availableAt
-   - createAt
-   - updateAt
+   Pastikan setiap atribut tabel user dan cars tersedia di database setelah melakukan migrasi.
    
    Kemudian generate seeder bila memerlukan data dummy dengan command:
    
@@ -72,3 +62,20 @@ Lakukan pengujian dengan mengirimkan request sesuai endpoint berikut:
 - POST/cars
 - PUT/cars/:id
 - DELETE/cars/:id
+
+- POST/user/register
+- POST/user/admin/register
+- POST/user/login
+- GET/user/me
+
+Untuk dokumentasi API lebih lengkap dapat diakses melalui:
+localhost:8000/api-docs
+
+# Pembagian role dan access
+Sebelum mengakses endpoint cars, pastikan user telah registrasi dan login untuk mendapatkan token. Token tersebut nantinya akan dikirimkan pada header authorization dengan tipe bearerToken. Ini akan menentukan akses dari setiap role.
+- SUPERADMIN
+  access: semua operasi
+- ADMIN
+  access: semua operasi kecuali untuk register admin
+- MEMBER
+  access: hanya bisa menampilkan data cars
