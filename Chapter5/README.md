@@ -55,18 +55,17 @@ Pada tugas ini mengambil studi kasus rental mobil dengan desain tabel tunggal se
 
 Gunakan url server dengan port 8000 untuk mengakses.
 Lakukan pengujian dengan mengirimkan request sesuai endpoint berikut:
-
+- POST/user/register
+- POST/user/admin/register
+- POST/user/login
+- GET/user/me
+<br>
 - GET/
 - GET/cars
 - GET/cars/:id
 - POST/cars
 - PUT/cars/:id
 - DELETE/cars/:id
-
-- POST/user/register
-- POST/user/admin/register
-- POST/user/login
-- GET/user/me
 
 Untuk dokumentasi API lebih lengkap dapat diakses melalui:
 localhost:8000/api-docs
