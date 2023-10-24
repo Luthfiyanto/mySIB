@@ -30,17 +30,17 @@ exports.checkUser = async (credential) => {
     const { email, password } = credential;
 
     if (!email || !password) {
-      throw new ApplicationError(`Please input email and password`);
+      throw new ApplicationError(`Please input email and password`, 400);
     }
 
     const user = await userRepository.findUserByEmail(email);
     if (!user) {
-      throw new ApplicationError(`Email not found`, 404);
+      throw new ApplicationError(`Email is invalid`, 401);
     }
 
     const checkPassword = await authService.checkPassword(password, user.encryptedPassword);
     if (!checkPassword) {
-      throw new ApplicationError(`Password is wrong`, 400);
+      throw new ApplicationError(`Password is invalid`, 401);
     }
 
     const token = authService.createToken({ id: user.id });

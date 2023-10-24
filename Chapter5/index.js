@@ -7,20 +7,29 @@ const authMiddleware = require("./app/middlewares/auth");
 const app = express();
 const PORT = 8000;
 
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./docs/openapi.json");
+
 app.use(express.json());
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+// Home
+app.get("/", generalController.home);
 
 // User
-app.post("/admin/register", authMiddleware.authorize, authMiddleware.isSuperAdmin, userController.registerAdmin);
+app.post("/user/admin/register", authMiddleware.authorize, authMiddleware.isSuperAdmin, userController.registerAdmin);
+app.post("/user/register", userController.register);
+app.post("/user/login", userController.login);
+app.get("/user/me", authMiddleware.authorize, userController.currentUser);
 
-app.post("/register", userController.register);
-app.post("/login", userController.login);
-
-app.get("/", generalController.home);
+// Cars
 app.get("/cars", authMiddleware.authorize, carController.list);
 app.get("/cars/:id", authMiddleware.authorize, carController.findAndSetById, carController.detail);
 app.post("/cars", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, carController.validationInputCar, carController.create);
 app.put("/cars/:id", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, carController.findAndSetById, carController.validationInputCar, carController.update);
 app.delete("/cars/:id", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, carController.findAndSetById, carController.destroy);
+
+// No page
 app.get("*", generalController.noPage);
 
 app.listen(PORT, () => {

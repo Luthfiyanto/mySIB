@@ -52,3 +52,11 @@ exports.registerAdmin = async (req, res) => {
     });
   }
 };
+
+exports.currentUser = (req, res) => {
+  return res.json({
+    status: "OK",
+    message: "Success",
+    data: req.user,
+  });
+};

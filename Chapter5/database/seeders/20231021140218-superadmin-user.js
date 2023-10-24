@@ -27,6 +27,17 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        id: uuidv4(),
+        email: "admin123@gmail.com",
+        encryptedPassword: bcrypt.hashSync("admin123", 10),
+        name: "Admin Asik",
+        address: "Semarang",
+        phoneNumber: "085822361098",
+        role: "ADMIN",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 

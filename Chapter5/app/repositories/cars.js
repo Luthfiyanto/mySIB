@@ -2,12 +2,12 @@ const { Car, User } = require("./../models");
 
 exports.getListCars = () => {
   return Car.findAll({
-    attributes: { exclude: ["createdBy", "updatedBy", "deletedBy"] },
+    attributes: { exclude: ["createdBy", "updatedBy", "deletedBy", "deletedAt"] },
   });
 };
 
 exports.getFilteredListCars = (params) => {
-  return Car.findAll({ where: params, attributes: { exclude: ["createdBy", "updatedBy", "deletedBy"] } });
+  return Car.findAll({ where: params, attributes: { exclude: ["createdBy", "updatedBy", "deletedBy", "deletedAt"] } });
 };
 
 exports.create = (body, user_id) => {
@@ -30,7 +30,7 @@ exports.findByPk = (id) => {
         as: "deleted",
       },
     ],
-    attributes: { exclude: ["createdBy", "updatedBy", "deletedBy"] },
+    attributes: { exclude: ["createdBy", "updatedBy", "deletedBy", "deletedAt"] },
   });
 };
 

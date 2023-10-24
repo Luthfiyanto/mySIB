@@ -34,7 +34,7 @@ const verifyToken = (token) => {
 const authorize = async (bearerToken) => {
   try {
     if (!bearerToken) {
-      throw new ApplicationError("Unauthorized", 401);
+      throw new ApplicationError("Authorization Header required", 400);
     }
 
     const token = bearerToken.split("Bearer ")[1];
