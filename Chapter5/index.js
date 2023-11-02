@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const generalController = require("./app/controllers/general");
 const carController = require("./app/controllers/cars");
 const userController = require("./app/controllers/user");
@@ -9,6 +10,8 @@ const PORT = 8000;
 
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./docs/openapi.json");
+
+app.use(cors());
 
 app.use(express.json());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
