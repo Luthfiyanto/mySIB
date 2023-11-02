@@ -5,7 +5,7 @@ exports.register = async (req, res) => {
     const body = req.body;
     const data = await userService.create(body, false);
 
-    return res.json({
+    return res.status(201).json({
       status: "OK",
       message: "Success",
       data,
@@ -40,7 +40,7 @@ exports.registerAdmin = async (req, res) => {
   try {
     const body = req.body;
     const data = await userService.create(body, true);
-    return res.json({
+    return res.status(201).json({
       status: "OK",
       message: "Success",
       data,
