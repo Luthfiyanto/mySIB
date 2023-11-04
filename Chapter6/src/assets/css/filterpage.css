@@ -1,0 +1,107 @@
+#filter_section {
+  position: relative;
+  translate: 0 -125px;
+}
+
+#filter_section > .card {
+  padding: 0.25rem 0.125rem;
+}
+
+.filter_card {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter > label {
+  font-size: 16px;
+  padding: 10px 0;
+  color: rgba(60, 60, 60, 1);
+}
+
+.filter_button {
+  display: flex;
+}
+
+.filter_button > button {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 16px 12px;
+}
+
+#result_data {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+#result_data > .card {
+  max-width: 300px;
+  min-width: 280px;
+}
+
+.card_car > img {
+  width: 100%;
+  min-height: 160px;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card_car > p {
+  margin: 0.5rem 0 !important;
+}
+
+.car-title {
+  font-weight: 600;
+}
+
+.desc {
+  min-height: 50px;
+}
+
+.detail_car {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.detail_car > p {
+  margin: 0 !important;
+}
+
+.empty {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 3rem;
+  color: rgb(160, 160, 160);
+}
+
+@media (min-width: 992px) {
+  .filter_card {
+    grid-template-columns: auto auto auto auto auto;
+  }
+
+  .filter_button {
+    justify-content: end;
+    align-items: flex-end;
+  }
+
+  .filter_button > button {
+    margin: 0;
+  }
+
+  #result_data {
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+  }
+}
