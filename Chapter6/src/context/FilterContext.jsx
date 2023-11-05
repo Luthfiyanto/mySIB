@@ -16,7 +16,7 @@ const FilterContextProvider = (props) => {
       const fullDateTime = new Date(`${date} ${time}`);
       console.log(fullDateTime);
 
-      const filteredCars = cars.filter((car) => car.available && car.capacity >= passanger);
+      const filteredCars = cars.filter((car) => car.available && car.capacity >= passanger && new Date(car.availableAt).getTime() >= fullDateTime);
       setCar(filteredCars);
     } catch (error) {
       console.log(error);
