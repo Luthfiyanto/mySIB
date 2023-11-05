@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { FilterContext } from "./context/FilterContext";
 import Card from "./components/Card";
 import EmptyCar from "./EmptyCar";
