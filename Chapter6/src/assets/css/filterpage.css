@@ -86,6 +86,13 @@
   color: rgb(160, 160, 160);
 }
 
+@media (min-width: 456px) {
+  #result_data {
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+}
+
 @media (min-width: 992px) {
   .filter_card {
     grid-template-columns: auto auto auto auto auto;

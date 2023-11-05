@@ -1,8 +1,28 @@
-# React + Vite
+# Challenge 6: React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tugas ini bertujuan untuk mengimplementasikan
+![Desain Rental Mobil](<https://www.figma.com/file/PKNYfwTP0UvhDV51msj2oK/BCR---Binar-Car-Rental-(Copy)?node-id=111%3A5698>)
+ke dalam bentuk projek React. Data yang diambil berasal dari ![API](https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json)
 
-Currently, two official plugins are available:
+## HOW TO RUN PROJECT
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone Repository**
+2. **Install Dependency**<br>
+   Dengan menjalankan perintah
+
+```bash
+npm install
+```
+
+3. **Jalankan Perintah**<br>
+
+```bash
+npm run dev
+```
+
+## HOW TO USE
+
+Buka localhost:5173 atau server lain yang terhubung dan masuk ke salah satu endpoint. Ada 2 endpoint yang bisa Anda coba yaitu:
+
+- "/home" => berisi landing page
+- "/cars" => berisi pencarian data mobil
