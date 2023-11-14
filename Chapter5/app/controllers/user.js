@@ -22,7 +22,7 @@ exports.login = async (req, res) => {
   try {
     const body = req.body;
 
-    data = await userService.checkUser(body);
+    const data = await userService.checkUser(body);
     return res.json({
       status: "OK",
       message: "Login Successful",
