@@ -50,11 +50,11 @@ Pada tugas ini mengambil studi kasus rental mobil dengan desain tabel tunggal se
    node index.js
    ```
 
-   Server akan berjalan pada port 8000 dan bisa dicek dengan mengetik url 'localhost:8000'
+   Untuk running local, Server akan berjalan pada port default 8000 dan bisa dicek dengan mengetik url 'localhost:8000'
 
 ## TESTING WITH POSTMAN
 
-Gunakan url server dengan port 8000 untuk mengakses.
+Gunakan url server \_(https://luthfiy-binar-rental-car.up.railway.app/) untuk mengakses secara langsung atau menggunakan localhost:8000 untuk yang berjalan di server local
 Lakukan pengujian dengan mengirimkan request sesuai endpoint berikut:
 
 - POST/user/register
@@ -70,7 +70,9 @@ Lakukan pengujian dengan mengirimkan request sesuai endpoint berikut:
 - DELETE/cars/:id
 
 Untuk dokumentasi API lebih lengkap dapat diakses melalui:
-localhost:8000/api-docs
+localhost:8000/api-docs <br>
+atau <br>
+\_(https://luthfiy-binar-rental-car.up.railway.app/api-docs)
 
 # Pembagian role dan access
 
