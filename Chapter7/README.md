@@ -1,6 +1,6 @@
 # Challenge 7 : Unit Testing
 
-Tugas ini bertujuan untuk mengimplementasikan design service repository pattern dengan menerapkan fitur authentication dan authorization serta association antara user dengan car. Kemudian hasil dari API yang dibuat didokumentasikan menggunakan Swagger yang bisa diakses melalui endpoint _( https://luthfiy-binar-rental-car.up.railway.app/ )_ setelah menjalankan projek.
+Tugas ini bertujuan untuk dapat melakukan unit testing dan deployment. Projek yang digunakan ini mengimplementasikan design service repository pattern dengan menerapkan fitur authentication dan authorization serta association antara user dengan car. Kemudian hasil dari API yang dibuat didokumentasikan menggunakan Swagger yang bisa diakses melalui endpoint _( https://luthfiy-binar-rental-car.up.railway.app/ )_ setelah menjalankan projek.
 
 ## Database dan Schema
 
