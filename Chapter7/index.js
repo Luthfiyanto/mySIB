@@ -4,6 +4,7 @@ const generalController = require("./app/controllers/general");
 const carController = require("./app/controllers/cars");
 const userController = require("./app/controllers/user");
 const authMiddleware = require("./app/middlewares/auth");
+const { validationInputCar } = require("./app/middlewares/validation");
 
 const app = express();
 const PORT = 8000;
@@ -28,8 +29,8 @@ app.get("/user/me", authMiddleware.authorize, userController.currentUser);
 // Cars
 app.get("/cars", authMiddleware.authorize, carController.list);
 app.get("/cars/:id", authMiddleware.authorize, carController.findAndSetById, carController.detail);
-app.post("/cars", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, carController.validationInputCar, carController.create);
-app.put("/cars/:id", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, carController.findAndSetById, carController.validationInputCar, carController.update);
+app.post("/cars", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, validationInputCar, carController.create);
+app.put("/cars/:id", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, carController.findAndSetById, validationInputCar, carController.update);
 app.delete("/cars/:id", authMiddleware.authorize, authMiddleware.isSuperOrAdmin, carController.findAndSetById, carController.destroy);
 
 // No page

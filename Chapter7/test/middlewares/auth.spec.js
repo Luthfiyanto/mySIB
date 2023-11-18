@@ -2,7 +2,7 @@
 const AuthMiddleware = require("./../../app/middlewares/auth");
 const authService = require("./../../app/services/auth");
 
-jest.mock("./../../app/services/auth", () => ({ authorize: jest.fn() }));
+jest.mock("./../../app/services/auth", () => ({ authorize: jest.fn(), isSuperAdmin: jest.fn(), isSuperOrAdmin: jest.fn() }));
 
 describe("Authentication", () => {
   describe("#Authorize", () => {
@@ -54,6 +54,100 @@ describe("Authentication", () => {
       expect(mockResponse.json).toHaveBeenCalledWith({
         status: "Fail",
         message: "Unauthorized",
+      });
+      expect(next).not.toHaveBeenCalled();
+    });
+  });
+
+  describe("#IsSuperAdmin", () => {
+    it("should call next middleware if user is SuperAdmin", () => {
+      const mockRequest = {
+        user: {
+          email: "superadmin@gmail.com",
+          name: "Super Admin",
+          role: "SUPERADMIN",
+        },
+      };
+      const mockResponse = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn().mockReturnThis(),
+      };
+
+      const next = jest.fn();
+
+      AuthMiddleware.isSuperAdmin(mockRequest, mockResponse, next);
+      expect(mockResponse.status).not.toHaveBeenCalled();
+      expect(mockResponse.json).not.toHaveBeenCalled();
+      expect(next).toHaveBeenCalled();
+    });
+
+    it("should return error status and message for not allowed role", () => {
+      const mockRequest = {
+        user: {
+          email: "testing@gmail.com",
+          name: "testing",
+          role: "MEMBER",
+        },
+      };
+      const mockResponse = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn().mockReturnThis(),
+      };
+
+      const next = jest.fn();
+
+      AuthMiddleware.isSuperAdmin(mockRequest, mockResponse, next);
+      expect(mockResponse.status).toHaveBeenCalledWith(403);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        status: "Fail",
+        message: "FORBIDDEN",
+      });
+      expect(next).not.toHaveBeenCalled();
+    });
+  });
+
+  describe("#IsSuperOrAdmin", () => {
+    it("should call next middleware if user is SuperAdmin or Admin", () => {
+      const mockRequest = {
+        user: {
+          email: "admin123@gmail.com",
+          name: "Admin",
+          role: "ADMIN",
+        },
+      };
+      const mockResponse = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn().mockReturnThis(),
+      };
+
+      const next = jest.fn();
+
+      AuthMiddleware.isSuperOrAdmin(mockRequest, mockResponse, next);
+      expect(mockResponse.status).not.toHaveBeenCalled();
+      expect(mockResponse.json).not.toHaveBeenCalled();
+      expect(next).toHaveBeenCalled();
+    });
+
+    it("should return error status and message for not allowed role", () => {
+      const mockRequest = {
+        user: {
+          email: "testing@gmail.com",
+          name: "testing",
+          role: "MEMBER",
+        },
+      };
+      const mockResponse = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn().mockReturnThis(),
+      };
+
+      const next = jest.fn();
+
+      AuthMiddleware.isSuperOrAdmin(mockRequest, mockResponse, next);
+      expect(mockResponse.status).toHaveBeenCalledWith(403);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        status: "Fail",
+        message: "FORBIDDEN",
       });
       expect(next).not.toHaveBeenCalled();
     });

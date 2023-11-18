@@ -56,9 +56,5 @@ exports.updateCar = async (id, payload, userId) => {
 };
 
 exports.deleteCar = async (id, userId) => {
-  try {
-    return Promise.all([carRepository.delete(id, userId), carRepository.update(id, { deletedBy: userId }, userId)]);
-  } catch (error) {
-    throw new ApplicationError(`Failed to delete car: ${error.message}`, 500);
-  }
+  return Promise.all([carRepository.delete(id, userId), carRepository.update(id, { deletedBy: userId }, userId)]);
 };
