@@ -2,7 +2,7 @@
 
 Tugas ini bertujuan untuk dapat melakukan unit testing dan deployment. Projek yang digunakan ini mengimplementasikan design service repository pattern dengan menerapkan fitur authentication dan authorization serta association antara user dengan car. Kemudian hasil dari API yang dibuat didokumentasikan menggunakan Swagger yang bisa diakses melalui endpoint _( https://luthfiy-binar-rental-car.up.railway.app/ )_ setelah menjalankan projek.
 
-**Catatan***untuk fasilitator:* <br>
+**Catatan** *untuk fasilitator:* <br>
 Projek yang dideploy tidak menggunakan repo ini, oleh sebab root di repo ini yang tidak langsung berada di subrepo Chapter7, sehingga saya perlu men-Copy projek Chapter7 ke dalam repo terpisah dan disesuaikan agar dapat melakukan deployment. Jadi harap dimaklumi jika terdapat konfigurasi database yang belum berubah untuk repo ini.
 
 ## Database dan Schema
