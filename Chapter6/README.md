@@ -1,8 +1,8 @@
 # Challenge 6: React
 
 Tugas ini bertujuan untuk mengimplementasikan
-![Desain Rental Mobil](<https://www.figma.com/file/PKNYfwTP0UvhDV51msj2oK/BCR---Binar-Car-Rental-(Copy)?node-id=111%3A5698>)
-ke dalam bentuk projek React. Data yang diambil berasal dari ![API](https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json)
+Desain : https://www.figma.com/file/PKNYfwTP0UvhDV51msj2oK/BCR---Binar-Car-Rental-(Copy)?node-id=111%3A5698
+ke dalam bentuk projek React. Data yang diambil berasal dari API: https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json
 
 ## HOW TO RUN PROJECT
 
