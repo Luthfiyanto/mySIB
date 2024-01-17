@@ -8,3 +8,5 @@ Chapter 4: Database Integration<br>
 Chapter 5: Authentication, Design Pattern, and API Documentation<br>
 Chapter 6: React (Landing page)<br>
 Chapter 7: Unit Testing<br>
+
+_Notes: Hasil akhir mini projek dapat dilihat pada chapter 6 (Frontend) dan chapter 7 (Backend)_
